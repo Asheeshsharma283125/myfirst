@@ -1,0 +1,51 @@
+# myfirst
+class node{
+  node next;
+  int data;
+  node(int data){
+    this.data = data;
+    }
+  }
+class SinglyLinkedList{
+  node head;
+  node temp;
+  count = 0
+  void insert(int a){
+    node n1 = new node(a);
+    if(head==null){
+      head = n1;
+      temp = head;
+      count++;
+      }
+    else{
+      temp.next = n1;
+      count++;
+      }
+    }
+   void insertAt(int pos,int a){
+    node n1 = new node(a);
+    count = 1;
+    if(head == null){
+      head = temp = n1;
+      }
+    else if(pos==1){
+      n1.next = head;
+      head = n1;
+      }
+    else if(this.count<pos){
+      System.out.println("List is outOfBound");
+      }
+    else{
+    node temp1 = head;
+    node prev = temp1;
+    while(temp1.next!=null){
+      prev = temp1;
+      temp1 = temp.next;
+      count++;
+      if(count==pos){
+        n1.next = temp1;
+        prev.next = n1;
+        }
+        }
+        }}
+  
